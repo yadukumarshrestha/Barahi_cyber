@@ -1,0 +1,294 @@
+/* General Styles */
+:root {
+    --primary-color: #004d99;
+    --secondary-color: #ffcc00;
+    --background-light: #f4f4f4;
+    --text-color: #333;
+    --text-color-light: #666;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.logo p {
+    font-size: 0.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: url('img/bc.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.service {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service h3 {
+    color: var(--primary-color);
+    margin: 15px 0 10px;
+}
+
+.service p {
+    color: var(--text-color-light);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About Us Section */
+#about {
+    padding: 50px 20px;
+}
+
+/* Contact Section */
+/* Adjust the contact button styles */
+button[type="submit"] {
+    padding: 5px 10px; /* Reduce padding for a smaller button */
+    font-size: 14px; /* Adjust font size if needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round corners */
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+#contact {
+    padding: 50px 20px;
+    background-color: #eaeaea;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em; /* Improve readability */
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em; /* Improve readability */
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* Location Section */
+#location {
+    padding: 50px 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ensures the service block is clickable */
+.service a {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Keeps the default text color */
+}
+
+.service:hover a {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Gallery Section */
+#edv-gallery {
+    padding: 50px 20px;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    width: 200px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item p {
+    padding: 10px;
+    color: #333;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Keep navigation horizontal */
+        flex-wrap: wrap; /* Allow wrapping of nav items */
+        justify-content: center; /* Center the nav items */
+    }
+
+    .services-container {
+        flex-direction: row; /* Keep service boxes in a horizontal line */
+        flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+        justify-content: center; /* Center the service boxes */
+    }
+
+    .service {
+        width: 45%; /* Set width to a percentage for horizontal alignment */
+        margin: 10px; /* Add margin for spacing */
+    }
+
+    .gallery-item {
+        width: 45%; /* Set width to a percentage for horizontal alignment */
+        margin: 10px; /* Add margin for spacing */
+    }
+    /*langague*/
+    .language-selector {
+        display: flex;
+        align-items: center;
+    }
+    
+    .mini-button {
+        background-color: #004d99; /* Button background color */
+        color: white; /* Text color */
+        border: none;
+        padding: 5px 10px; /* Adjust padding for mini size */
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+        font-size: 0.9em; /* Font size for mini button */
+    }
+    
+    .mini-button:hover {
+        background-color: #003366; /* Darker shade on hover */
+        transform: scale(1.05); /* Slight scale effect on hover */
+    }
+    
+
